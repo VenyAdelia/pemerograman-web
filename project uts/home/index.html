@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faldia Grand Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="dark-toggle">Dark Mode</button>
+
+<header>
+  <h1>Faldia Grand Hotel</h1>
+  <nav>
+    <ul>
+      <li><a href="#" data-target="tentang">Beranda</a>
+        <ul> 
+          <li><a href="#" data-target="profil">Profil</a></li>
+          <li><a href="#" data-target="restoran">Restoran</a></li>
+          <li><a href="#" data-target="fasilitas">Fasilitas</a></li>
+          <li><a href="#" data-target="kontak">Kontak</a></li>
+        </ul>
+      </li>
+      <li><a href="#" data-target="kamar">Kamar</a></li>
+      <li><a href="#" data-target="meeting">Meeting/Event</a></li>
+      <li><a href="#" data-target="lokasi">Lokasi</a></li>
+      <li><a href="#" data-target="promo">Promo</a></li>
+      <li><a href="#" data-target="galeri">Galeri</a></li>
+      <li><a href="#" data-target="faq">FAQ</a></li>
+      <li><a href="#" data-target="testimoni">Testimoni</a></li>
+      <li><a href="#" data-target="booking">Booking</a></li>
+      <li><a href="#" data-target="profil-programmer">Profil Programmer</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="slider" class="slider">
+  <img src="img/hdddd.jpg" class="slide active">
+  <img src="img/inihd.jpg" class="slide">
+  <img src="img/foto2.jpg" class="slide">
+</div>
+
+<section id="tentang" class="content-section tentang-section" style="display: block;">
+  <div class="tentang-container">
+    <div class="tentang-kiri">
+      <img src="img/logo.jpg" alt="Logo Faldia Grand Hotel" class="logo-fa">
+    </div>
+    <div class="tentang-kanan">
+      <h2>Tentang Kami</h2>
+      <p><strong>Faldia Grand Hotel</strong> menghadirkan pengalaman menginap mewah di pusat kota dengan sentuhan modern dan pelayanan prima.</p>
+      <ul>
+        <li>Restoran bintang lima</li>
+        <li>Kolam renang & spa</li>
+        <li>Gym & ruang meeting</li>
+        <li>Layanan 24 jam</li>
+      </ul>
+      <p>Hubungi kami: <a href="mailto:info@faldiagrandhotel.com">info@faldiagrandhotel.com</a> | Telp: <a href="tel:081234567890">0812-3456-7890</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="profil" class="content-section profil-section">
+  <h2>Profil Faldia Grand Hotel</h2>
+  <div class="profil-intro">
+    <p><strong>Faldia Grand Hotel</strong> berdiri sejak tahun 2010 dan menjadi pilihan utama wisatawan dan pebisnis di Indonesia. Dengan perpaduan desain modern dan pelayanan berkelas, kami hadir untuk menciptakan pengalaman menginap terbaik bagi Anda.</p>
+  </div>
+  <div class="profil-stats">
+    <div><h3>200+</h3><p>Kamar Mewah</p></div>
+    <div><h3>15</h3><p>Ruang Meeting & Ballroom</p></div>
+    <div><h3>1000+</h3><p>Tamu Puas per Bulan</p></div>
+  </div>
+  <div class="profil-grid">
+    <div class="profil-left"><img src="img/profil.jpg" alt="Lobi Hotel" class="rounded-img"></div>
+    <div class="profil-right">
+      <h3>Visi</h3>
+      <p>Menjadi hotel terbaik dan terpercaya di Indonesia dengan pelayanan unggulan.</p>
+      <h3>Misi</h3>
+      <ul>
+        <li>Memberikan pengalaman menginap tak terlupakan.</li>
+        <li>Selalu mengutamakan kepuasan tamu.</li>
+        <li>Menjaga kualitas dan profesionalisme dalam setiap layanan.</li>
+      </ul>
+      <div class="testimoni-box">
+        <blockquote>"Pelayanan yang sangat ramah dan kamar sangat bersih — membuat saya selalu kembali menginap di sini." <br> <strong>- Linda, Bandung</strong></blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="awards">
+    <h3>Penghargaan & Sertifikasi</h3>
+    <img src="img/tripadvisor.jpg" alt="Tripadvisor Award">
+    <img src="img/chse.jpg" alt="CHSE Certified">
+  </div>
+</section>
+
+<section id="kamar" class="content-section kamar-section">
+  <h2>Pilihan Kamar</h2>
+  <div class="kamar-container">
+    <div class="kamar-card">
+      <img src="img/kmarstndrr.jpg" alt="Kamar Standar">
+      <h3>Kamar Standar</h3>
+      <ul>
+        <li>Kasur single</li>
+        <li>Lemari baju</li>
+        <li>Meja belajar</li>
+        <li>WiFi gratis</li>
+      </ul>
+      <p class="rating">★★★★☆</p>
+      <p class="harga">Rp 800.000 / satu malam</p>
+      <a href="#booking" onclick="setTipeKamar('Kamar Standar')" class="btn-booking">Pesan Sekarang</a>
+    </div>
+
+    <div class="kamar-card">
+      <img src="img/roomac.jpg" alt="Kamar AC">
+      <h3>Kamar AC</h3>
+      <ul>
+        <li>Double bed</li>
+        <li>Lemari besar</li>
+        <li>Meja & kursi</li>
+        <li>AC & WiFi gratis</li>
+      </ul>
+      <p class="rating">★★★★★</p>
+      <p class="harga">Rp 1.200.000 / satu malam</p>
+      <a href="#booking" onclick="setTipeKamar('Kamar AC')" class="btn-booking">Pesan Sekarang</a>
+    </div>
+
+    <div class="kamar-card">
+      <img src="img/viproom.jpg" alt="Kamar VIP">
+      <h3>Kamar VIP</h3>
+      <ul>
+        <li>Kasur king size</li>
+        <li>TV & AC</li>
+        <li>Kamar mandi dalam</li>
+        <li>WiFi super cepat</li>
+      </ul>
+      <p class="rating">★★★★★</p>
+      <p class="harga">Rp 1.800.000 satu malam</p>
+      <a href="#booking" onclick="setTipeKamar('Kamar VIP')" class="btn-booking">Pesan Sekarang</a>   
+    </div>
+   <h3>Perbandingan Fasilitas Kamar</h3>
+<table class="tabel-perbandingan">
+  <thead>
+    <tr>
+      <th>Fasilitas</th>
+      <th>Standar</th>
+      <th>AC</th>
+      <th>VIP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WiFi</td>
+      <td>Ya</td>
+      <td>Ya</td>
+      <td>Super Cepat</td>
+    </tr>
+    <tr>
+      <td>AC</td>
+      <td>-</td>
+      <td>Ya</td>
+      <td>Ya</td>
+    </tr>
+    <tr>
+      <td>TV</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Ya</td>
+    </tr>
+    <tr>
+      <td>Kamar Mandi Dalam</td>
+      <td>Ya</td>
+      <td>Ya</td>
+      <td>Ya</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</section>
+
+<section id="booking" class="content-section">
+  <h2>Form Booking</h2>
+  <form>
+    <input type="text" placeholder="Nama Lengkap" required>
+    <input type="email" placeholder="Email" required>
+
+    <label for="tipe-kamar">Tipe Kamar</label>
+    <select name="tipe_kamar" id="tipe-kamar" required>
+      <option value="">Pilih Tipe Kamar</option>
+      <option value="Kamar Standar">Kamar Standar</option>
+      <option value="Kamar AC">Kamar AC</option>
+      <option value="Kamar VIP">Kamar VIP</option>
+    </select>
+
+    <input type="date" required>
+    <input type="number" placeholder="Jumlah Malam" required>
+    <textarea placeholder="Permintaan Khusus"></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+
+
+
+<section id="profil-programmer"  class="content-section">
+ <div class="profil-programmer">
+  <div class="container">
+    <h2>Profil Programmer</h2>
+    <div class="programmer-card">
+      <img src="img/fotosaya.jpg" alt="Veny Adelia">
+      <div class="programmer-info">
+        <h3>Veny Adelia</h3>
+        <p>saya adalah seorang mahasiswa Teknik Informatika di Universitas YYYX yang sedang mengembangkan website Faldia Grand Hotel. Ia memiliki ketertarikan pada pemrograman web dan sedang mendalami HTML, CSS, serta Visual Basic.NET. Selain itu, Veny juga hobi membaca dan menonton film.</p>
+        <p>Email: <a href="mailto:venydelia42@gmail.com">venydelia42@gmail.com</a></p>
+
+        <div class="skills">
+          <h4>Skill</h4>
+          <ul>
+            <li>HTML & CSS</li>
+            <li>Visual Basic.NET</li>
+            <li>Desain UI Sederhana</li>
+            <li>Penulisan Konten Web</li>
+          </ul>
+        </div>
+        <blockquote class="quote">
+          “Koding itu seperti seni butuh logika, tapi juga rasa.”
+        </blockquote>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<section id="restoran" class="content-section restoran-section" style="display: none;">
+  <h2>Restoran Kami</h2>
+  <div class="restoran-container">
+    <div class="restoran-img">
+      <img src="img/restoran.jpg" alt="Restoran Faldia Grand Hotel" class="rounded-img">
+    </div>
+    <div class="restoran-deskripsi">
+      <p>Selamat datang di <strong>Restoran Faldia</strong>, tempat terbaik menikmati kuliner lezat dengan suasana nyaman dan elegan.</p>
+      <h3>tersedia berbagai macam hidangan</h3>
+      <ul>
+        <li>Nasi Goreng Faldia Spesial</li>
+        <li>Steak Premium Saus Lada Hitam</li>
+        <li>Grilled Salmon with Lemon Butter</li>
+        <li>Aneka dessert & kopi artisan</li>
+      </ul>
+     
+      <div class="jam-operasional">
+        <h3>Jam Operasional</h3>
+        <ul>
+          <li><strong>Senin - Jumat:</strong> 07.00 - 22.00 WIB</li>
+          <li><strong>Sabtu - Minggu:</strong> 06.30 - 23.00 WIB</li>
+        </ul>
+      </div>
+
+      <h3>Menu Unggulan Kami</h3>
+<div class="menu-grid">
+  <div class="menu-card">
+    <img src="img/nasi.jpg" alt="Nasi Goreng Spesial">
+    <div class="menu-info">
+      <h4>Nasi Goreng Spesial</h4>
+      <p>Nasi goreng dengan telur, ayam suwir, dan sambal khas Faldia.</p>
+      <span class="harga">Rp 45.000</span>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="img/steak.jpg" alt="Steak Daging Premium">
+    <div class="menu-info">
+      <h4>Steak Daging Premium</h4>
+      <p>Daging pilihan dengan saus lada hitam dan kentang goreng.</p>
+      <span class="harga">Rp 120.000</span>
+    </div>
+  </div>
+
+ 
+    <div class="menu-card">
+      <img src="img/dessert.jpg" alt="Nasi Goreng Spesial">
+      <div class="menu-info">
+        <h4>dessert faldia</h4>
+        <p>cake lembut dengan sentuhan rasa nanas </p>
+        <span class="harga">Rp 59.000</span>
+      </div>
+    </div>
+   
+
+  <div class="menu-card">
+    <img src="img/kopi.jpg" alt="Es Kopi Susu Faldia">
+    <div class="menu-info">
+      <h4>Es Kopi Susu Faldia</h4>
+      <p>Kopi arabika segar dengan susu premium dan es batu kristal.</p>
+      <span class="harga">Rp 25.000</span>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="fasilitas" class="content-section">
+  <div class="fasilitas-item">
+    <img src="img/spaaaaaa.jpg" alt="Spa Eksklusif">
+    <div class="text">
+      <h3><i class="icon fa-solid fa-spa"></i> Spa Eksklusif</h3>
+      <p>Nikmati layanan spa mewah dengan suasana tenang dan aromaterapi alami.</p>
+    </div>
+  </div>
+
+  <div class="fasilitas-item">
+    <img src="img/kolammm.jpg" alt="Kolam Renang Infinity">
+    <div class="text">
+      <h3><i class="icon fa-solid fa-water"></i> Kolam Renang Infinity</h3>
+      <p>Rasakan sensasi berenang dengan pemandangan langit dan laut menyatu.</p>
+    </div>
+  </div>
+
+  <div class="fasilitas-item">
+    <img src="img/restaurant.jpg" alt="Restoran Premium">
+    <div class="text">
+      <h3><i class="icon fa-solid fa-utensils"></i> Restoran Premium</h3>
+      <p>Disajikan oleh chef profesional dengan bahan lokal pilihan setiap hari.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="content-section">
+  <div class="kontak-container">
+    <h2>Hubungi Kami</h2>
+    <p class="kontak-subtitle">Silakan hubungi kami untuk informasi lebih lanjut</p>
+    
+    <div class="kontak-info">
+      <p><strong>Alamat:</strong> Jl. Raya merpati No.88, Bandung</p>
+      <p><strong>Telepon:</strong> (62)81234567890 </p>
+      <p><strong>Email:</strong> kontak@faldiagrandhotel.com</p>
+    </div>
+
+    <div class="jam-operasional">
+      <h3>Jam Operasional</h3>
+      <p>Senin - Jumat: 08:00 - 20:00</p>
+      <p>Sabtu - Minggu: 10:00 - 22:00</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="meeting" class="content-section">
+    <div class="container">
+      <h2>Meeting Event</h2>
+      <p class="section-description">Pilih paket ruangan meeting terbaik untuk kebutuhan acara Anda.</p>
+      <table class="meeting-table">
+        <thead>
+          <tr>
+            <th>Gambar</th>
+            <th>Nama Ruangan</th>
+            <th>Tipe Meja</th>
+            <th>Kapasitas</th>
+            <th>Fasilitas</th>
+            <th>Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="img/shapee1.jpg" alt="U-Shape"></td>
+            <td>Ruang Merapi</td>
+            <td>U-Shape</td>
+            <td>30 orang</td>
+            <td>LCD, Sound, Coffee Break</td>
+            <td>Rp 3.500.000</td>
+          </tr>
+          <tr class="alt-row">
+            <td><img src="img/classrooom.jpg" alt="Classroom"></td>
+            <td>Ruang Krakatau</td>
+            <td>Classroom</td>
+            <td>50 orang</td>
+            <td>LCD, Mic, Lunch</td>
+            <td>Rp 5.000.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/benquet.jpg" alt="Banquet"></td>
+            <td>Ruang Bromo</td>
+            <td>Banquet</td>
+            <td>80 orang</td>
+            <td>Full Catering, Dekorasi</td>
+            <td>Rp 7.000.000</td>
+          </tr>
+          <tr class="alt-row">
+            <td><img src="img/theater.jpg" alt="Theater Style"></td>
+            <td>Ruang Semeru</td>
+            <td>Theater</td>
+            <td>100 orang</td>
+            <td>Proyektor, Mic Wireless, Konsumsi</td>
+            <td>Rp 8.000.000</td>
+          </tr>
+          <tr>
+            <td><img src="img/boardroom.jpg" alt="Boardroom"></td>
+            <td>Ruang Rinjani</td>
+            <td>Boardroom</td>
+            <td>20 orang</td>
+            <td>AC, Smart TV, Makanan Ringan</td>
+            <td>Rp 2.800.000</td>
+          </tr>
+          <tr class="alt-row">
+            <td><img src="img/coaktaillll.jpg" alt="Cocktail"></td>
+            <td>Ruang Sindoro</td>
+            <td>Cocktail</td>
+            <td>60 orang</td>
+            <td>Lighting, Musik, Minuman</td>
+            <td>Rp 6.200.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+<section id="lokasi" class="content-section">
+  <div class="lokasi-container">
+    <div class="lokasi-info">
+      <h2>Lokasi Kami</h2>
+      <p><strong>Faldia Grand Hotel</strong></p>
+      <p>Jl. Merpati No. 88, Bandung, Jawa Barat 40123</p>
+      <p>Telp: (022) 123-4567</p>
+      <p>Email: info@faldiagrandhotel.com</p>
+      <p>
+        Faldia Grand Hotel terletak strategis di jantung kota Bandung, hanya 5 menit dari Stasiun Bandung
+        dan dekat dengan pusat perbelanjaan, restoran, serta objek wisata populer seperti Gedung Sate dan Braga.
+      </p>
+      <a href="https://www.google.com/maps/place/Faldia+Grand+Hotel" target="_blank" class="btn-maps">
+        Lihat di Google Maps
+      </a>
+    </div>
+    
+    <div class="lokasi-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63352.69350222065!2d107.57311654298078!3d-6.903449133727672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64edb0b2a4b%3A0xf55adbe41d8768cb!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1714632022330!5m2!1sid!2sid"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section id="promo" class="content-section">
+  
+    <div class="container">
+      <h2 class="section-title">Promo Spesial</h2>
+      <div class="promo-scroll">
+
+        <div class="promo-card">
+          <img src="img/promo.jpg" alt="Promo 1">
+          <div class="promo-content">
+            <h3>Menginap 3 Malam Gratis 1</h3>
+            <p>Promo menginap 3 malam berturut-turut gratis 1 malam tambahan. Berlaku hingga 30 Juni 2025.</p>
+          </div>
+        </div>
+
+        
+        <div class="promo-card">
+          <img src="img/diskon.jpg" alt="Promo 2">
+          <div class="promo-content">
+            <h3>Diskon 20% Akhir Pekan</h3>
+            <p>Nikmati diskon 20% untuk pemesanan di hari Jumat - Minggu. Berlaku untuk semua jenis kamar.</p>
+          </div>
+        </div>
+
+
+        <div class="promo-card">
+          <img src="img/pket.jpg" alt="Promo 3">
+          <div class="promo-content">
+            <h3>Paket Meeting Hemat</h3>
+            <p>Paket meeting termasuk makan siang dan coffee break dengan harga khusus untuk perusahaan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="promo-more">
+        <a href="promo.html" class="promo-button">Lihat Semua Promo</a>
+      </div>
+    </div>
+  
+</section>
+
+
+<section id="galeri" class="content-section">
+  <section class="galeri">
+    <h2>Galeri</h2>
+  
+    <div class="galeri-kategori">
+      <h3>Lobi</h3>
+      <div class="galeri-grid">
+        <img src="img/lantaidsr.jog.jpg" alt="Lobi Hotel">
+        <img src="img/lntai2dsr.jpg" alt="Lobi Hotel">
+        <img src="img/lobyyyy.jpg" alt="Lobi Hotel">
+        <p>loby yang luas untuk pengunjung</p>
+      </div>
+    </div>
+  
+    <div class="galeri-kategori">
+      <h3>Kamar</h3>
+      <div class="galeri-grid">
+        <img src="img/kmar3.jpg" alt="Kamar Hotel">
+        <img src="img/kmar2.jpg" alt="Kamar Hotel">
+        <img src="img/inikmar.jpg" alt="Kamar Hotel">
+        <p>kamar yang nyaman dan bersih</p>
+      </div>
+    </div>
+  
+    <div class="galeri-kategori">
+      <h3>Restoran</h3>
+      <div class="galeri-grid">
+        <img src="img/restorannntt.jpg" alt="Restoran">
+        <img src="img/restorant2.jpg" alt="Restoran">
+        <img src="img/restorann3.jpg" alt="Restoran">
+        <p>makanan yang disajikan 100% lezat</p>
+      </div>
+    </div>
+
+    <div class="galeri-kategori">
+      <h3>Kolam berenang</h3>
+      <div class="galeri-grid">
+        <img src="img/kolammrr1.jpg" alt="Kamar Hotel">
+        <img src="img/kolamrrr2.jpg" alt="Kamar Hotel">
+        <img src="img/kolamr3.jpg" alt="Kamar Hotel">
+        <p>kolam yang luas dan jernih</p>
+      </div>
+    </div>
+
+  </section>
+</section>      
+  
+
+<section id="faq" class="content-section">
+  <h2>FAQ</h2>
+  <div class="card">
+    <strong>Apakah hotel menyediakan antar-jemput bandara?</strong>
+    <p>Ya, layanan antar-jemput tersedia dengan pemesanan sebelumnya.</p>
+  </div>
+  <div class="card">
+    <strong>Apakah ada WiFi gratis?</strong>
+    <p>WiFi gratis tersedia di semua area hotel.</p>
+  </div>
+  <div class="card">
+    <strong>Apakah tamu bisa chek-in lebih awal</strong>
+    <p>chek-in lebih awal tergantung pada ketersediaan kamar dan dapat dikenakan biaya tambahan</p>
+  </div>
+
+  <div class="card">
+    <strong>Apakah tersedia parkir gratis?</strong>
+    <p>ya, hotel menyediakan area parkir gratis untuk tamu.</p>
+  </div>
+
+  <div class="card">
+    <strong>Apakah hewan peliharaan diperbolehkan masuk?</strong>
+    <p>maaf,saat ini hotel kami belum menerima tamu dengan hewan peliharaan.</p>
+  </div>
+
+  <div class="card">
+    <strong>Apakah hotel menerima pembayaran non-tunai?</strong>
+    <p>ya, kami menerima pembayaran dengan kartu debit,kartu kredit, dan e-wallet.</p>
+  </div>
+
+
+  <div class="card">
+    <strong>bagaimana car amnegubah atau membatalkan reservasi?</strong>
+    <p>silahkan hubungi bagian reservasi  hotel atau gunakan tautan konfirmasi yang dikirim melalui email.</p>
+  </div>
+
+  <div class="card">
+    <strong>Apakah tersedia layanan penyimpanan bagasi?</strong>
+    <p>ya,tamu dapat menitipkan bagasi di resepsionis sebelum check-in atau setelah check-out.</p>
+  </div>
+
+</section>
+
+<section id="testimoni" class="content-section">
+ 
+  <h2>Testimoni Tamu</h2>
+  <div class="grid">
+    <div class="card">
+    <div class="testimoni-box">
+      <p>"Pelayanan luar biasa dan kamar sangat nyaman!"</p>
+      <strong>- Rina, Jakarta</strong>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="testimoni-box">
+      <p>"Tempat sempurna untuk liburan keluarga!"</p>
+      <strong>- Budi, Surabaya</strong>
+    </div>
+    </div>
+  
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Staf sangat ramah dan membantu selama kami menginap.</p>
+    <strong>- Lina, Bandung</strong>
+  </div>
+  </div>
+
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Lokasi strategis, dekat dengan pusat perbelanjaan dan tempat wisata.</p>
+    <strong>- Andi, Yogyakarta</strong>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Sarapan enak dan sangat bervariasi setiap hari!</p>
+    <strong>- Dewa, Denpasar</strong>
+  </div>
+</div>
+  
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Sangat bersih dan fasilitasnya lengkap. Pasti kembali lagi!</p>
+    <strong>- Sarah, Makassar</strong>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Kamar luas dan pemandangannya indah sekali.</p>
+    <strong>- Bayu, Medan</strong>
+  </div>
+</div>
+  
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Layanan room service cepat dan profesional.</p>
+    <strong>- Farah, Semarang</strong>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="testimoni-box">
+     <p>Tempat yang cocok untuk staycation akhir pekan.</p>
+    <strong>- Niko, Bogor</strong>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Internet kencang, cocok buat kerja remote dari hotel.</p>
+    <strong>- Rafi, Malang</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Kolam renangnya bersih dan anak-anak senang berenang di sana.</p>
+    <strong>- Indah, Palembang</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Harga terjangkau dengan kualitas hotel bintang lima!</p>
+    <strong>- Rina, Solo</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Ruang meeting sangat nyaman dan lengkap untuk acara kantor kami.</p>
+    <strong>- Agus, Jakarta</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Interior hotel sangat elegan dan modern, cocok untuk foto-foto!</p>
+    <strong>- Melisa, Bekasi</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Proses check-in cepat dan tidak ribet, sangat memuaskan.</p>
+    <strong>- Rendi, Cirebon</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Fasilitas gym lengkap dan bersih, sangat mendukung olahraga harian.</p>
+    <strong>- Yoga, Depok</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Kamar mandi luas dan air panas tersedia 24 jam.</p>
+    <strong>- Siska, Balikpapan</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Anak-anak senang sekali dengan playground dan kids corner-nya.</p>
+    <strong>- Arif, Pontianak</strong>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Parkir luas dan aman, cocok untuk tamu dengan kendaraan pribadi.</p>
+    <strong>- Dian, Batam</strong>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="testimoni-box">
+    <p>Harga promo sangat menguntungkan, apalagi dengan fasilitas yang lengkap.</p>
+    <strong>- Hendra, Tasikmalaya</strong>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<a href="https://wa.me/6281234567890" class="whatsapp" target="_blank">Chat via WhatsApp</a>
+
+<footer>
+  <p>&copy; 2025 Faldia Grand Hotel | Website resmi</p>
+</footer>
+
+<script>
+// Navigasi
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('.content-section');
+const slider = document.getElementById('slider');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('data-target');
+    sections.forEach(sec => sec.style.display = 'none');
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) targetSection.style.display = 'block';
+    slider.style.display = (targetId === 'tentang') ? 'block' : 'none';
+    if (targetId === 'booking') {
+      const select = document.getElementById('tipe-kamar');
+      select.value = "";
+    }
+  });
+});
+
+// Dark mode toggle
+document.getElementById('dark-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+// Slider otomatis_ 
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add('active');
+}
+setInterval(showSlides, 3000);
+
+// Fungsi pilih tipe kamar
+function setTipeKamar(tipe) {
+  const select = document.getElementById('tipe-kamar');
+  select.value = tipe;
+  sections.forEach(sec => sec.style.display = 'none');
+  const bookingSection = document.getElementById('booking');
+  bookingSection.style.display = 'block';
+  slider.style.display = 'none';
+  bookingSection.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
