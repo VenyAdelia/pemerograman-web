@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary: #3c6382;
+  --primary-dark: #0a3d62;
+  --background: #fdfdfd;
+  --input-bg: #f0f0f5;
+  --border-color: #dcdde1;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --success: #38ada9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #fefefe, #f4f6f9);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--background);
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px var(--shadow-color);
+  width: 100%;
+  max-width: 800px;
+  transition: 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-dark);
+  font-size: 26px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #2f3542;
+  font-size: 14px;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  font-size: 14px;
+  transition: border 0.3s, background 0.3s;
+}
+
+form input:focus {
+  border-color: var(--primary);
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(60, 99, 130, 0.15);
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: var(--primary-dark);
+}
+
+#pesan-sukses {
+  color: green;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: left;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.lihat-data {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.lihat-data:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Tabel */
+.table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--primary-dark);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f9fc;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+td:last-child {
+  white-space: nowrap;
+}
+
+/* Tautan aksi */
+.aksi-link {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.aksi-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.btn-kembali {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-kembali:hover {
+  background-color: var(--primary-dark);
+}
+

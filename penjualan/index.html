@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Penjualan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>Form Penjualan</h2>
+
+    <form id="form-penjualan" method="POST">
+      <label for="kode">Kode Transaksi</label>
+      <input type="text" id="kode" name="kode_transaksi" required>
+
+      <label for="nama">Nama Barang</label>
+      <input type="text" id="nama" name="nama_barang" required>
+
+      <label for="jumlah">Jumlah Beli</label>
+      <input type="number" id="jumlah" name="jumlah_beli" required>
+
+      <label for="harga">Harga Satuan</label>
+      <input type="number" id="harga" name="harga_satuan" required>
+
+      <label for="total">Total</label>
+      <input type="number" id="total" name="total" readonly>
+
+      <button type="submit">SIMPAN</button>
+    </form>
+
+    <!-- ✅ Pesan sukses tampil sementara -->
+    <p id="pesan-sukses" style="display: none; margin-top: 15px; color: green; font-weight: 500;"></p>
+
+    <a href="lihat.php" class="lihat-data">Lihat Data</a>
+  </div>
+
+  <script>
+    // Hitung Total Otomatis
+    const jumlah = document.getElementById('jumlah');
+    const harga = document.getElementById('harga');
+    const total = document.getElementById('total');
+
+    function hitungTotal() {
+      const jml = parseInt(jumlah.value) || 0;
+      const hrg = parseInt(harga.value) || 0;
+      total.value = jml * hrg;
+    }
+
+    jumlah.addEventListener('input', hitungTotal);
+    harga.addEventListener('input', hitungTotal);
+
+    // AJAX Simpan Data
+    document.getElementById('form-penjualan').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+
+      fetch('simpan.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data.includes('berhasil')) {
+          const pesan = document.getElementById('pesan-sukses');
+          pesan.style.display = 'block';
+          pesan.textContent = data;
+
+          // Reset form dan total
+          this.reset();
+          total.value = '';
+
+          // ✅ Hilangkan pesan setelah 3 detik
+          setTimeout(() => {
+            pesan.style.display = 'none';
+            pesan.textContent = '';
+          }, 3000);
+        }
+      })
+      .catch(error => {
+        console.error('Gagal menyimpan:', error);
+      });
+    });
+  </script>
+</body>
+</html>
